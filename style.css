@@ -1,120 +1,125 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 @font-face {
-    font-family: 'Bbcf';
-    src: url('./assets/fonts/Burbank-Big-Condensed-Font.otf') format('truetype');
+  font-family: "Bbcf";
+  src: url("./assets/fonts/Burbank-Big-Condensed-Font.otf") format("truetype");
+}
+:root {
+  --primary: #141414;
+  --secondary: #FBFBFF;
+  --grey: #cdcdcd;
+  --accent: #e30449;
+  --border: rgb(245, 245, 245, .25);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'Poppins';
-    color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins";
+  color: white;
 }
 
 h1 {
-    font-size: 28px;
-    font-weight: 600;
-    text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
 }
 
-select, option {
-    color: black;
+select,
+option {
+  color: white;
 }
 
 button {
-    border: none;
-    cursor: pointer;
+  border: none;
+  cursor: pointer;
 }
 
 body {
-    background: linear-gradient(135deg, #151c30 0%, #263b54 70%) center fixed;
+  background: var(--primary);
 }
 
-nav h1 {
-    font-size: 38px;
-    font-family: Bbcf;
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #8C8C8C;
+  filter: url(#grainy);
+  opacity: 0.2;
+  border-radius: 100%;
 }
 
-header nav h1, a{
-    color: white;
-    padding: 10px 20px;
+/* Header */
+header nav {
+  height: 75px;
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav h1,
+header nav a {
+  padding: 10px 20px;
+}
+header nav h1 {
+  font-size: 38px;
+  font-family: Bbcf;
+  color: white;
 }
 
-nav {
-    height: 75px;
-    padding: 5px 0;
-    display: flex;
-    align-items: center;
-}
-
-.weapons-wrapper {
-    height: 91.1vh ;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
+/* Weapons */
 .weapons {
-    width: 700px;
-    height: calc(91.1vh - 75px);
-    border: 1px solid white;
-    border-radius: 10px;
-    background: linear-gradient(135deg, #2c5676, #4f4277);
+  margin: auto;
+  width: 50%;
+  height: calc(91.1vh - 75px);
+  background: var(--primary, 0.5);
+  border: 1px solid var(--border);
+  border-radius: 10px;
 }
-
-.weapons h1 {
-    text-align: left;
-    padding: 15px 20px;
-}
-
 .weapons header h1 {
-    border-bottom: 1px solid#151c305b;
+  padding: 15px 20px;
+  color: var(--accent);
+  text-align: left;
+  border-bottom: 1px solid var(--border);
 }
-
-.no-weapons-found {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.weapons .inputs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
 }
-
-.wrapper-button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    left: 50%;
-    translate: -50%;
-    bottom: 50px;
+.weapons .inputs .filter-select {
+  display: flex;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 5px 7px;
+  background: transparent;
+  border: 1px solid var(--border);
+  width: min-content;
+  cursor: pointer;
 }
-
-.wrapper-button button {
-    margin: 30px 0 10px 0;
-    height: 150px;
-    width: 150px;
-    background: url(./assets/img/icons8-plus-150.png);
+.weapons .inputs .filter-select p {
+  color: var(--grey);
 }
-
-.inputs {
-    border: 1px solid red;
-    display: flex;
+.weapons .inputs .filter-select ion-icon {
+  color: var(--grey);
+  padding-left: 7px;
+  padding-top: 4px;
 }
-
-.inputs .filter-select {
-    display: flex;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 5px 7px;
-    background: transparent;
-    border: 1px solid;
-    width: min-content;
-    cursor: pointer;
+.weapons .NoWeaponsFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 50px;
 }
-
-.inputs ion-icon {
-    padding-left: 7px;
-    padding-top: 4px;
-}
+.weapons .NoWeaponsFound button {
+  margin: 30px 0 10px 0;
+  height: 150px;
+  width: 150px;
+  background: url(./assets/img/icons8-plus-150.png);
+}/*# sourceMappingURL=style.css.map */

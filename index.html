@@ -1,70 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <title>Fortnite Executor</title>
 </head>
+
 <body>
-    <div class="wrapper">
+
+    <svg style="display: none;">
+        <filter id="grainy">
+            <feTurbulence type="turbulence" baseFrequency="0.5" />
+        </filter>
+    </svg>
+
+    <header>
+        <nav>
+            <h1>Itemms</h1>
+            <div class="items">
+                <a href="#">Home</a>
+                <a href="#">Cosmetics</a>
+                <a href="#">Weapons</a>
+                <a href="#"></a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="weapons">
         <header>
-            <nav>
-                <h1>Itemms</h1>
-                <div class="items">
-                    <a href="#">Home</a>
-                    <a href="#">Cosmetics</a>
-                    <a href="#">Weapons</a>
-                    <a href="#"></a>
-                </div>
-            </nav>
+            <h1>Weapons</h1>
         </header>
-        
-        <div class="weapons-wrapper">
-            <div class="weapons">
-                <header>
-                    <h1>Weapons</h1>
-                </header>
 
-                <div class="inputs">
-                    <div class="filter-select filter-type">
-                        Type
-                        <ion-icon name="chevron-down-outline"></ion-icon>
-                    </div>
+        <div class="inputs">
+            <div class="filter-select filter-type">
+                <p>Type</p>
+                <ion-icon name="chevron-down-outline"></ion-icon>
+            </div>
 
-                    <div class="filter-select filter-rarity">
-                        Rarity
-                        <ion-icon name="chevron-down-outline"></ion-icon>
-                    </div>
+            <div class="filter-select filter-rarity">
+                <p>Rarity</p>
+                <ion-icon name="chevron-down-outline"></ion-icon>
+            </div>
 
-                    <div class="filter-select filter-season">
-                        Season
-                        <ion-icon name="chevron-down-outline"></ion-icon>
-                    </div>
-
-                </div>
-
-                <div class="add">
-
-                </div>
-                
-                <div class="wrapper-button">
-                    <button></button>
-                    <p style="padding: 0 0 10px 0;">Add your own weapons</p>
-                </div>
-
-
-
+            <div class="filter-select filter-season">
+                <p>Season</p>
+                <ion-icon name="chevron-down-outline"></ion-icon>
             </div>
         </div>
 
+        <div class="add">
+            <form>
+                <div class="weaponName">
+                    
+                </div>
+            </form>
+        </div>
 
-        <!-- <div class="home">
+        <div class="NoWeaponsFound">
+            <button id="addWeapon"></button>
+            <p style="padding: 0 0 10px 0;">Add your own weapons</p>
+        </div>
+    </div>
+
+
+    <!-- <div class="home">
             <h1>Welcome to fortnite executor! Fortnite executor is an all in one applicion where you can quickly copy the id of any fortnite items!</h1>
         </div> -->
-    </div>
     <script src="./main.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>

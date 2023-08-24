@@ -15,9 +15,20 @@ class Weapons {
     }
 }
 
-let add = document.querySelector('.add')
-let noweaponsfound = document.querySelector('.no-weapons-found')
-let wrapperbutton = document.querySelector('.wrapper-button')
+let addWeapon = document.querySelector("#addWeapon")
+let body = document.querySelector("body")
+addWeapon.addEventListener("click", () => {
+    let background = document.createElement("div")
+    let style = background.style;
+    body.append(background)
+    style.position = "absolute"
+    style.width = "100%"
+    style.height = "100%"
+    style.top = "0"
+    style.background = "#14141480"
+    style.zIndex = "10"
+    noweaponsfound.style.display = "none"
+})
 
-wrapperbutton.style.display = "none"
-noweaponsfound.style.display = "none"
+let add = document.querySelector('.add')
+let noweaponsfound = document.querySelector('.NoWeaponsFound')
